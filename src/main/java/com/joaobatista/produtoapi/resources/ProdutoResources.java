@@ -20,37 +20,25 @@ public class ProdutoResources {
 
     @GetMapping("/produtos")
     @ApiOperation("Retorna a lista de produtos cadastrados.")
-    public List<Produto> listaprodutos(){
-        return produtoRepository.findAll();
-    }
+    public List<Produto> listaprodutos(){return produtoRepository.findAll();}
 
     @GetMapping("/produtos/{id}")
     @ApiOperation("Retorna a lista de produtos cadastrados de acodo com o id informado.")
-    public Produto listaprodutosunico(@PathVariable(value = "id")long id){
-        return produtoRepository.findById(id);
-    }
+    public Produto listaprodutosunico(@PathVariable(value = "id")long id){return produtoRepository.findById(id);}
 
     @PostMapping("/produtos")
     @ApiOperation("Cria um novo cadastro de produto")
-    public Produto createproduto (@RequestBody Produto produto){
-        return produtoRepository.save(produto);
-    }
+    public Produto createproduto (@RequestBody Produto produto){return produtoRepository.save(produto);}
 
     @DeleteMapping("/produtos")
     @ApiOperation("Deleta um produto do banco de dados")
-    public void deleteproduto (@RequestBody Produto produto){
-        produtoRepository.delete(produto);
-    }
+    public void deleteproduto (@RequestBody Produto produto){produtoRepository.delete(produto);}
 
     @DeleteMapping("/produtos/{id}")
     @ApiOperation("Deleta um produto do banco de dados de acordo com id informado")
-    public void deleteprodutoid (@PathVariable(value = "id")long id){
-        produtoRepository.deleteById(id);
-    }
+    public void deleteprodutoid (@PathVariable(value = "id")long id){produtoRepository.deleteById(id);}
 
     @PutMapping("/produtos")
     @ApiOperation("Atualiza o cadastro de um produto")
-    public void atualizaproduto (@RequestBody Produto produto){
-        produtoRepository.save(produto);
-    }
+    public void atualizaproduto (@RequestBody Produto produto){produtoRepository.save(produto);}
 }
