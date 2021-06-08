@@ -33,7 +33,7 @@ public class SwaggerConfig {
               "1.0",
               "Terms of service",
               new Contact("João Batista","joaobatista.com.br","joao.batista.jrs@gmail.com"),
-              "Apache License version 2.0",
+              "Apache License version 4.0.0",
               "http://www.apache.org/license.html",new ArrayList<VendorExtension>());
         return apiInfo;
     }
