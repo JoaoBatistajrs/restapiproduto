@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.service.VendorExtension;
+
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -34,7 +34,7 @@ public class SwaggerConfig {
               "Terms of service",
               new Contact("João Batista","joaobatista.com.br","joao.batista.jrs@gmail.com"),
               "Apache License version 4.0.0",
-              "http://www.apache.org/license.html",new ArrayList<VendorExtension>());
+              "https://www.apache.org/license.html",new ArrayList<>());
         return apiInfo;
     }
 }
